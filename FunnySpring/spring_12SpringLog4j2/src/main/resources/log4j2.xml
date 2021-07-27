@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- status : 指定log4j本身的打印日志的级别.ALL< Trace < DEBUG < INFO < WARN < ERROR
+< FATAL < OFF。 monitorInterval : 用于指定log4j自动重新配置的监测间隔时间，单位是s,最小是5s. -->
+<Configuration status="ALL" monitorInterval="30">
+    <!--https://blog.csdn.net/vbirdbest/article/details/71751835 -->
+    <properties>
+        <!--定义日志文件输出的路径 -->
+        <property name="LOG_HOME">D:/test/logs</property>
+        <!--定义日志文件输出的文件名称 -->
+        <property name="FILE_NAME">log</property>
+        <!-- 输出日志的格式 %d{yyyy-MM-dd HH:mm:ss.SSS}: 表示打log时的时间毫秒 [%t]：输出当前线程名称 %-5level：输出日志级别,-5表示左对齐并且固定输出5个字符，如果不足在右边补0
+                %C:类全名 %L：输出行号 %M：输出所在方法名 %msg：日志文本 %n:输出换行符 -->
+        <property name="MSG_PATTERN">%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %C %L %M - %msg%n</property>
+    </properties>
+
+
+    <Appenders>
+        <!--这个输出控制台的配置 -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch） -->
+            <ThresholdFilter level="debug" onMatch="ACCEPT"
+                             onMismatch="DENY" />
+            <PatternLayout
+                    pattern="${MSG_PATTERN}" />
+        </Console>
+        <!--这个只会会打印出info级别的所有的信息，每次大小超过size，则这size大小的日志会自动存入按年份-月份建立的文件夹下面并进行压缩，作为存档-->
+        <!--随机滚动日志文件:name:这个appender的name,用于logger的root配置；fileName：日志文件名称（在日志文件外面显示的）；filePattern：存档日志文件的路径以及名称-->
+        <RollingRandomAccessFile name="InfoFile"
+                                 fileName="${LOG_HOME}/info.log"
+                                 filePattern="${LOG_HOME}/$${FILE_NAME}/${FILE_NAME}-info-%d{yyyy-MM-dd}-%i.log">
+            <!--日志级别过滤，下面这种配置方式，就可以实现，这个日志文件里面只打印info级别的信息deny:拒绝;accept:接受;neutral：中立  -->
+            <Filters>
+                <ThresholdFilter level="warn" onMatch="DENY"
+                                 onMismatch="NEUTRAL" />
+                <ThresholdFilter level="info" onMatch="ACCEPT"
+                                 onMismatch="DENY" />
+            </Filters>
+            <!--日志输出个格式  -->
+            <PatternLayout
+                    pattern="${MSG_PATTERN}" />
+            <!--日志滚动策略：多个策略
+            TimeBasedTriggeringPolicy表示按照时间间隔来进行日志文件的滚动，间隔单位可以是分钟、小时，具体需要根据filePattern的格式来进行判别；
+                例如filePattern="e:/app-%d{yyyy-MM-dd_HH-mm}-%i.out"，则表示mm（分钟）为单位；
+                interval：表示分隔日志的时间间隔大小，如果时间间隔单位是分钟，则表示相隔1分钟、10分钟等进行一次日志分隔；
+                modulate：表示是否对分隔时间进行调制；如果设置为true则表示分隔的时间从每天的0点、每小时的0分钟开始进行计算，每间隔多久进行一次切割；比如，modulate=true，interval=4hours，那么假设上次封存日志的时间为03:00，则下次封存日志的时间为04:00，之后的封存时间依次为08:00，12:00，16:00。。。
+            CronTriggeringPolicy：表示日志文件按照设置的时间点来进行滚动；
+            SizeBasedTriggeringPolicy表示按照规定的日志文件大小进行切割日志；
+                size：表示进行切割日志文件大小的极值，当日志文件大小满足size的值时，就会进行日志的切割；
+            DefaultRolloverStrategy表示log4j2每单位时间内最多能保存多少个日志切割文件
+              -->
+            <Policies>
+                <!--一天滚一次，单个文件大于20MB滚一次  -->
+                <TimeBasedTriggeringPolicy interval="1"/>
+                <SizeBasedTriggeringPolicy size="20MB" />
+            </Policies>
+            <!-- 文件夹里面最多保留有14个文件 -->
+            <DefaultRolloverStrategy max="14" />
+            <!--配置删除修改时间在多少age以上的日志文件  -->
+            <!-- <DefaultRolloverStrategy>
+                <Delete basePath="${LOG_HOME}" maxDepth="2">
+                    <IfFileName glob="*/$${FILE_NAME}/${FILE_NAME}-*.log" />
+                    <IfLastModified age="1s" />
+                </Delete>
+            </DefaultRolloverStrategy> -->
+        </RollingRandomAccessFile>
+
+        <!--这个只会会打印出warn级别以上的所有的信息，每次大小超过size，则这size大小的日志会自动存入按年份-月份建立的文件夹下面并进行压缩，作为存档-->
+        <RollingRandomAccessFile name="ErrorFile"
+                                 fileName="${LOG_HOME}/error.log"
+                                 filePattern="${LOG_HOME}/$${FILE_NAME}/${FILE_NAME}-error-%d{yyyy-MM-dd}-%i.log">
+            <Filters>
+                <ThresholdFilter level="warn" onMatch="ACCEPT"
+                                 onMismatch="DENY" />
+            </Filters>
+            <PatternLayout
+                    pattern="${MSG_PATTERN}" />
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" />
+                <SizeBasedTriggeringPolicy size="20MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="14" />
+        </RollingRandomAccessFile>
+    </Appenders>
+
+    <Loggers>
+        <!--跟日志，所有的appeder都继承这个rootlogger  -->
+        <Root level="trace">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="InfoFile" />
+            <AppenderRef ref="ErrorFile" />
+        </Root>
+    </Loggers>
+</Configuration>

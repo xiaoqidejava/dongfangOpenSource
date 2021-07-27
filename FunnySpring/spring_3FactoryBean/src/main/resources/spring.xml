@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--        <bean class="com.xiaoqi.FactoryBean.MyFactoryBean" id="bean"/>-->
+
+<!--        <bean class="com.xiaoqi.FactoryBean.Student" id="student" scope="singleton">-->
+<!--                <property name="age" value="1"/>-->
+<!--                <property name="name" value="xiaoqi"/>-->
+<!--        </bean>-->
+
+
+        <bean class="com.xiaoqi.Bean.Student" id="student2" init-method="init" destroy-method="destoryMethod">
+                <property name="age" value="1"/>
+                <property name="username" value="小柒"/>
+        </bean>
+
+        <!--配置后置处理器-->
+        <bean class="com.xiaoqi.BeanPostProcessor.MyBeanPost" id="beanPost">
+        </bean>
+
+</beans>

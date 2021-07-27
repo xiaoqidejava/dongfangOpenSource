@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+        <bean id="user" class="com.xiaoqi.createBean.domain.User" />
+        <!--xml方式注入普通类型的属性-->
+        <!--set方式注入属性-->
+        <bean class="com.xiaoqi.createBean.domain.Student" id="student">
+                <property name="name" value="小柒"/>
+                <property name="id" value="12"/>
+        </bean>
+
+        <!--使用有参构造方式注入属性-->
+        <bean class="com.xiaoqi.createBean.domain.Teacher" id="teacher">
+                <constructor-arg name="name" value="lisi"/>
+                <constructor-arg name="password" value="xiaoqi"/>
+        </bean>
+
+        <!--p名称空间注入属性-->
+        <bean class="com.xiaoqi.createBean.domain.Student" id="student1" p:id="14" p:name="xiaoqi"/>
+
+        <!-- xml方式注入其他类型的属性 -->
+        <!--1.注入null值-->
+        <bean class="com.xiaoqi.createBean.domain.Student" id="student4">
+                <property name="name" value="小柒"/>
+                <!--在property标签中间使用null标签 ，表示注入空值-->
+                <property name="id" >
+                        <null/>
+                </property>
+        </bean>
+
+        <!--2.注入特殊符号的值
+            例如输出结果为 <南京>
+            有两种方式
+            1.使用转义字符 &lt;&gt;
+            2.把带有特殊符号的内容写到CDATA中
+        -->
+        <bean class="com.xiaoqi.createBean.domain.Student" id="student3">
+                <property name="id" value="12"/>
+                <!--在property标签中间使用null标签 ，表示注入空值-->
+                <property name="name" >
+                        <value> <![CDATA[<南京>]]> </value>
+                </property>
+        </bean>
+
+
+        <!--2.注入对象类型的值
+                1.外部Bean
+        -->
+        <bean class="com.xiaoqi.createBean.service.UserService" id="userService">
+               <property name="userDao" ref="userDao"/>
+        </bean>
+        <bean class="com.xiaoqi.createBean.dao.UserDaoImpl" id="userDao" />
+
+        <!--3.注入对象类型的值
+                1.内部Bean
+        -->
+        <bean class="com.xiaoqi.createBean.domain.Emp" id="emp">
+                <property name="age" value="14"/>
+                <property name="name" value="白玉"/>
+                <!--内部bean的方式注入属性-->
+                <property name="dept">
+                        <bean class="com.xiaoqi.createBean.domain.Dept" id="dept" >
+                                <property name="name" value="燕大"/>
+                        </bean>
+                </property>
+        </bean>
+
+
+</beans>

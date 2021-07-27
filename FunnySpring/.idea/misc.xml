@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisProjectProfileManager">
+    <option name="PROJECT_PROFILE" />
+    <option name="USE_PROJECT_LEVEL_SETTINGS" value="false" />
+    <list size="0" />
+  </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/spring_1CreateBean" />
+    <file type="web" url="file://$PROJECT_DIR$/spring_3FactoryBean" />
+    <file type="web" url="file://$PROJECT_DIR$/spring_4autowire" />
+    <file type="web" url="file://$PROJECT_DIR$/spring_5contextToProperties" />
+    <file type="web" url="file://$PROJECT_DIR$/spring_6annotationCreatBean" />
+    <file type="web" url="file://$PROJECT_DIR$/spring_7JDKProxy" />
+    <file type="web" url="file://$PROJECT_DIR$/spring_8AOPAspects" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc_1helloSpringMVC" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc_2ReciveParams" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc_3RetrunValue" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc_4urlPattern" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/springCreateBean/pom.xml" />
+        <option value="$PROJECT_DIR$/springDI/pom.xml" />
+        <option value="$PROJECT_DIR$/springFactoryBean/pom.xml" />
+        <option value="$PROJECT_DIR$/springautowire/pom.xml" />
+        <option value="$PROJECT_DIR$/contextToProperties/pom.xml" />
+        <option value="$PROJECT_DIR$/annotationCreatBean/pom.xml" />
+        <option value="$PROJECT_DIR$/springJDKProxy/pom.xml" />
+        <option value="$PROJECT_DIR$/springAOPAspects/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_1CreateBean/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_2DI/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_3FactoryBean/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_4autowire/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_5contextToProperties/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_6annotationCreatBean/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_7JDKProxy/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_8AOPAspects/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_9SpringAndMybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_10SpringTransaction/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_11SpringTransactionXML/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_1helloSpringMVC/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_12SpringLog4j2/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_13SpringJunit/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_2RerutnValue/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_3RetrunValue/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_2ReciveParams/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_4urlPattern/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="SuppressionsComponent">
+    <option name="suppComments" value="[]" />
+  </component>
+</project>

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="spring_6annotationCreatBean:war">
+    <output-path>$PROJECT_DIR$/../spring_6annotationCreatBean/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>spring_6annotationCreatBean</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="spring_6annotationCreatBean-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="spring_6annotationCreatBean:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+<!--    <bean class="com.xiaoqi.collectionType.CollectionDI" id="collectionDI">-->
+<!--        &lt;!&ndash;数组类型属性注入&ndash;&gt;-->
+<!--        <property name="a">-->
+<!--            <array>-->
+<!--                <value>1</value>-->
+<!--                <value>2</value>-->
+<!--            </array>-->
+<!--        </property>-->
+<!--        &lt;!&ndash;list属性注入&ndash;&gt;-->
+<!--        <property name="list">-->
+<!--            <list>-->
+<!--                <value>小柒</value>-->
+<!--                <value>是老大</value>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--        <property name="map">-->
+<!--            <map>-->
+<!--                <entry key="xiaoqi" value="牛逼"></entry>-->
+<!--                <entry key="矿泉水" value="好喝"></entry>-->
+<!--            </map>-->
+<!--        </property>-->
+
+<!--        <property name="stus">-->
+<!--            <list>-->
+<!--                <ref bean="stu1"></ref>-->
+<!--                <ref bean="stu2"></ref>-->
+<!--                <ref bean="stu3"></ref>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--    </bean>-->
+<!--    <bean id="stu1" class="com.xiaoqi.collectionType.Stu">-->
+<!--        <property name="cources" value="小柒"/>-->
+<!--    </bean>-->
+<!--    <bean id="stu2" class="com.xiaoqi.collectionType.Stu">-->
+<!--        <property name="cources" value="小路"/>-->
+<!--    </bean>-->
+<!--    <bean id="stu3" class="com.xiaoqi.collectionType.Stu">-->
+<!--        <property name="cources" value="小雨"/>-->
+<!--    </bean>-->
+
+    <util:list id="stu">
+        <value>"白痴"</value>
+        <value>"大傻"</value>
+        <value>"二傻"</value>
+    </util:list>
+
+    <bean class="com.xiaoqi.collectionType.Book" id="book">
+        <property name="stuList" ref="stu" />
+    </bean>
+</beans>

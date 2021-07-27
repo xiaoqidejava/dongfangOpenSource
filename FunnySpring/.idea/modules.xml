@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/spring_10SpringTransaction/spring_10SpringTransaction.iml" filepath="$PROJECT_DIR$/spring_10SpringTransaction/spring_10SpringTransaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_11SpringTransactionXML/spring_11SpringTransactionXML.iml" filepath="$PROJECT_DIR$/spring_11SpringTransactionXML/spring_11SpringTransactionXML.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_12SpringLog4j2/spring_12SpringLog4j2.iml" filepath="$PROJECT_DIR$/spring_12SpringLog4j2/spring_12SpringLog4j2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_13SpringJunit/spring_13SpringJunit.iml" filepath="$PROJECT_DIR$/spring_13SpringJunit/spring_13SpringJunit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_1CreateBean/spring_1CreateBean.iml" filepath="$PROJECT_DIR$/spring_1CreateBean/spring_1CreateBean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_2DI/spring_2DI.iml" filepath="$PROJECT_DIR$/spring_2DI/spring_2DI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_3FactoryBean/spring_3FactoryBean.iml" filepath="$PROJECT_DIR$/spring_3FactoryBean/spring_3FactoryBean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_4autowire/spring_4autowire.iml" filepath="$PROJECT_DIR$/spring_4autowire/spring_4autowire.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_5contextToProperties/spring_5contextToProperties.iml" filepath="$PROJECT_DIR$/spring_5contextToProperties/spring_5contextToProperties.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_6annotationCreatBean/spring_6annotationCreatBean.iml" filepath="$PROJECT_DIR$/spring_6annotationCreatBean/spring_6annotationCreatBean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_7JDKProxy/spring_7JDKProxy.iml" filepath="$PROJECT_DIR$/spring_7JDKProxy/spring_7JDKProxy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_8AOPAspects/spring_8AOPAspects.iml" filepath="$PROJECT_DIR$/spring_8AOPAspects/spring_8AOPAspects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_9SpringAndMybatis/spring_9SpringAndMybatis.iml" filepath="$PROJECT_DIR$/spring_9SpringAndMybatis/spring_9SpringAndMybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springmvc_1helloSpringMVC/springmvc_1helloSpringMVC.iml" filepath="$PROJECT_DIR$/springmvc_1helloSpringMVC/springmvc_1helloSpringMVC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springmvc_2ReciveParams/springmvc_2ReciveParams.iml" filepath="$PROJECT_DIR$/springmvc_2ReciveParams/springmvc_2ReciveParams.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springmvc_3RetrunValue/springmvc_3RetrunValue.iml" filepath="$PROJECT_DIR$/springmvc_3RetrunValue/springmvc_3RetrunValue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springmvc_4urlPattern/springmvc_4urlPattern.iml" filepath="$PROJECT_DIR$/springmvc_4urlPattern/springmvc_4urlPattern.iml" />
+    </modules>
+  </component>
+</project>

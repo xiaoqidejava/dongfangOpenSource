@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring_9SpringAndMybatis" />
+        <module name="spring_1CreateBean" />
+        <module name="spring_5contextToProperties" />
+        <module name="spring_11SpringTransactionXML" />
+        <module name="springmvc_1helloSpringMVC" />
+        <module name="spring_3FactoryBean" />
+        <module name="springmvc_2ReciveParams" />
+        <module name="spring_7JDKProxy" />
+        <module name="spring_2DI" />
+        <module name="spring_8AOPAspects" />
+        <module name="spring_4autowire" />
+        <module name="spring_12SpringLog4j2" />
+        <module name="spring_10SpringTransaction" />
+        <module name="springmvc_4urlPattern" />
+        <module name="springmvc_3RetrunValue" />
+        <module name="spring_6annotationCreatBean" />
+        <module name="spring_13SpringJunit" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spring_10SpringTransaction" target="1.8" />
+      <module name="spring_11SpringTransactionXML" target="1.8" />
+      <module name="spring_12SpringLog4j2" target="1.8" />
+      <module name="spring_13SpringJunit" target="1.8" />
+      <module name="spring_1CreateBean" target="1.8" />
+      <module name="spring_2DI" target="1.8" />
+      <module name="spring_3FactoryBean" target="1.8" />
+      <module name="spring_4autowire" target="1.8" />
+      <module name="spring_5contextToProperties" target="1.8" />
+      <module name="spring_6annotationCreatBean" target="1.8" />
+      <module name="spring_7JDKProxy" target="1.8" />
+      <module name="spring_8AOPAspects" target="1.8" />
+      <module name="spring_9SpringAndMybatis" target="1.8" />
+      <module name="springmvc_1helloSpringMVC" target="1.8" />
+      <module name="springmvc_2ReciveParams" target="1.8" />
+      <module name="springmvc_3RetrunValue" target="1.8" />
+      <module name="springmvc_4urlPattern" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

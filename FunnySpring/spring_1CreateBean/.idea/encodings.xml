@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/../spring_10SpringTransaction/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../spring_2DI/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../spring_2DI/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../spring_3FactoryBean/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../spring_3FactoryBean/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../spring_4autowire/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../spring_4autowire/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../spring_5contextToProperties/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../spring_5contextToProperties/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../spring_7JDKProxy/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../spring_7JDKProxy/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../spring_9SpringAndMybatis/src/main/java" charset="UTF-8" />
+  </component>
+</project>

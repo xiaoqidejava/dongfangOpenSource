@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="springJDKProxy:war">
+    <output-path>$PROJECT_DIR$/springJDKProxy/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>springJDKProxy</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="springJDKProxy-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="springJDKProxy:war exploded" />
+    </root>
+  </artifact>
+</component>

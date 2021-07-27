@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--第一步：开启组件扫描
+        1.如果需要扫描多个包 我们中间 可以使用 ， 隔开
+        2.可以扫描这些包的上层路径
+    -->
+    <!--方式一-->
+    <context:component-scan base-package="com.luzhikun.dao , com.luzhikun.service" />
+    <!--方式二-->
+    <context:component-scan base-package="com.luzhikun"/>
+
+    <!--
+        详细谈谈组件扫描标签
+        use-default-filters="false":表示现在不使用默认的filter，自己配置filter
+        context:include-filter：设置要扫描那些内容。
+        下面示例的含义是：不使用默认的filter
+                        只扫描设置的注解
+    -->
+    <context:component-scan base-package="com.luzhikun" use-default-filters="false">
+        <context:include-filter type="annotation"
+                                expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+    <!--
+        下面配置扫描包中所有内容
+        context:exclude-filter：设置哪些内容不进行扫描
+    -->
+    <context:component-scan base-package="com.luzhikun">
+        <context:exclude-filter type="annotation"
+                                expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+</beans>

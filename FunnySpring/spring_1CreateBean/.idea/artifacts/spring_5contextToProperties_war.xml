@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="spring_5contextToProperties:war">
+    <output-path>$PROJECT_DIR$/../spring_5contextToProperties/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>spring_5contextToProperties</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="spring_5contextToProperties-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="spring_5contextToProperties:war exploded" />
+    </root>
+  </artifact>
+</component>
